@@ -9,7 +9,11 @@ Este es un proyecto de práctica para aprender sobre:
 
 ## Descripción
 
-API desarrollada con Node.js y Express que implementa versionado de endpoints (v1) y está preparada para ser desplegada en Vercel.
+API desarrollada con Node.js y Express que implementa versionado de endpoints (v1), variables de entorno y está desplegada en Vercel.
+
+## URL de Producción
+
+**API en vivo:** https://mi-api-aventura-sigma.vercel.app
 
 ## Estructura del Proyecto
 
