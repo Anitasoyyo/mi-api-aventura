@@ -4,4 +4,4 @@ const respuesta = {
 };
 
 // Exportar la respuesta para su uso en la API
-module.exports = respuesta;
+export default respuesta;

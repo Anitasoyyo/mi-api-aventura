@@ -1,5 +1,5 @@
 // Importar Express
-const express = require("express");
+import express from "express";
 
 // Crear la aplicación Express
 const app = express();
@@ -16,17 +16,15 @@ app.get("/", (req, res) => {
 });
 
 // Ruta API v1 - Hola
-app.get("/api/v1/hola", (req, res) => {
-  const respuesta = require("./api/v1/hola");
-  res.json(respuesta);
+app.get("/api/v1/hola", async (req, res) => {
+  const respuesta = await import("./api/v1/hola.js");
+  res.json(respuesta.default);
 });
 
 // Exportar la app para Vercel
-module.exports = app;
+export default app;
 
-// Iniciar el servidor solo si no está en Vercel
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://localhost:${PORT}`);
-  });
-}
+// Iniciar el servidor
+app.listen(PORT, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+});
