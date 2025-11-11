@@ -1,3 +1,7 @@
+// Configurar variables de entorno
+import dotenv from "dotenv";
+dotenv.config();
+
 // Importar Express
 import express from "express";
 
