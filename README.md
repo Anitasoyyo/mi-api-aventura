@@ -220,11 +220,11 @@ cp .env.example .env
 
 **Variables requeridas:**
 
-| Variable             | Descripción                                              | Ejemplo                                    |
-| -------------------- | -------------------------------------------------------- | ------------------------------------------ |
-| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                           |
-| `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | Ver documentación de MongoDB Atlas         |
-| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | `mi-super-secreto-2024`                    |
+| Variable             | Descripción                                              | Ejemplo                            |
+| -------------------- | -------------------------------------------------------- | ---------------------------------- |
+| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                   |
+| `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | Ver documentación de MongoDB Atlas |
+| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | `mi-super-secreto-2024`            |
 
 ## Configuración de MongoDB Atlas
 
@@ -262,12 +262,12 @@ El servidor estará disponible en `http://localhost:3000`
 
 Este proyecto utiliza las siguientes variables de entorno:
 
-| Variable             | Descripción                              | Ejemplo                                 |
-| -------------------- | ---------------------------------------- | --------------------------------------- |
-| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola | `"¡Bienvenido!"`                        |
-| `MONGODB_URI`        | URL de conexión a MongoDB Atlas          | Obtener desde MongoDB Atlas Dashboard   |
-| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | `mi-super-secreto-2024`                 |
-| `PORT`               | Puerto del servidor (opcional)           | `3000`                                  |
+| Variable             | Descripción                              | Ejemplo                               |
+| -------------------- | ---------------------------------------- | ------------------------------------- |
+| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola | `"¡Bienvenido!"`                      |
+| `MONGODB_URI`        | URL de conexión a MongoDB Atlas          | Obtener desde MongoDB Atlas Dashboard |
+| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | `mi-super-secreto-2024`               |
+| `PORT`               | Puerto del servidor (opcional)           | `3000`                                |
 
 ## Despliegue en Vercel
 
@@ -283,10 +283,12 @@ Este proyecto incluye **documentación interactiva** generada con Swagger UI.
 ### Acceder a la documentación:
 
 **Desarrollo local:**
+
 1. Inicia el servidor: `npm start`
 2. Abre en tu navegador: `http://localhost:3000/api-docs`
 
 **Características de la documentación:**
+
 - 📖 Descripción detallada de todos los endpoints
 - 🧪 Interfaz para probar los endpoints directamente
 - 🔒 Soporte para autenticación JWT
@@ -324,4 +326,3 @@ Para más detalles, consulta [AUTH_GUIDE.md](AUTH_GUIDE.md)
 
 - **[APUNTES.md](APUNTES.md)**: Notas de aprendizaje sobre Mongoose, MongoDB y arquitectura del proyecto.
   También incluyo imágenes que explican de manera intuitiva la estructura que he seguido para crear diferentes partes del proyecto.
-- **[AUTH_GUIDE.md](AUTH_GUIDE.md)**: Guía completa de autenticación JWT
