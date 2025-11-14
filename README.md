@@ -220,11 +220,11 @@ cp .env.example .env
 
 **Variables requeridas:**
 
-| Variable             | Descripción                                              | Ejemplo                                                        |
-| -------------------- | -------------------------------------------------------- | -------------------------------------------------------------- |
-| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                                               |
-| `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | `mongodb+srv://USER:PASS@cluster0.xxxxx.mongodb.net/DATABASE` |
-| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | `mi-super-secreto-2024`                                        |
+| Variable             | Descripción                                              | Ejemplo                                    |
+| -------------------- | -------------------------------------------------------- | ------------------------------------------ |
+| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                           |
+| `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | Ver documentación de MongoDB Atlas         |
+| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | `mi-super-secreto-2024`                    |
 
 ## Configuración de MongoDB Atlas
 
@@ -262,12 +262,12 @@ El servidor estará disponible en `http://localhost:3000`
 
 Este proyecto utiliza las siguientes variables de entorno:
 
-| Variable             | Descripción                              | Ejemplo                                             |
-| -------------------- | ---------------------------------------- | --------------------------------------------------- |
-| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola | `"¡Bienvenido!"`                                    |
-| `MONGODB_URI`        | URL de conexión a MongoDB Atlas          | `mongodb+srv://USER:PASS@cluster0.xxxxx.mongodb.net/DB` |
-| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | `mi-super-secreto-2024`                             |
-| `PORT`               | Puerto del servidor (opcional)           | `3000`                                              |
+| Variable             | Descripción                              | Ejemplo                                 |
+| -------------------- | ---------------------------------------- | --------------------------------------- |
+| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola | `"¡Bienvenido!"`                        |
+| `MONGODB_URI`        | URL de conexión a MongoDB Atlas          | Obtener desde MongoDB Atlas Dashboard   |
+| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | `mi-super-secreto-2024`                 |
+| `PORT`               | Puerto del servidor (opcional)           | `3000`                                  |
 
 ## Despliegue en Vercel
 
