@@ -14,8 +14,11 @@ import verificarToken from "./middleware/auth.js";
 import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './config/swagger.js';
 
-// Conectar a MongoDB
-connectDB();
+// Conectar a MongoDB (sin bloquear el inicio en caso de error)
+connectDB().catch(err => {
+  console.error("Error inicial de MongoDB:", err.message);
+  // No bloqueamos el servidor, las rutas manejarán el error
+});
 
 // Crear la aplicación Express
 const app = express();
@@ -308,7 +311,9 @@ app.get("/api/v1/usuarios", verificarToken, async (req, res) => {
 // Exportar la app para Vercel
 export default app;
 
-// Iniciar el servidor
-app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
-});
+// Iniciar el servidor solo en desarrollo local (no en Vercel)
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  });
+}
