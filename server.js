@@ -11,11 +11,11 @@ import login from "./api/v1/login.js";
 import verificarToken from "./middleware/auth.js";
 
 // Importar Swagger
-import swaggerUi from 'swagger-ui-express';
-import swaggerSpec from './config/swagger.js';
+import swaggerUi from "swagger-ui-express";
+import swaggerSpec from "./config/swagger.js";
 
 // Conectar a MongoDB (sin bloquear el inicio en caso de error)
-connectDB().catch(err => {
+connectDB().catch((err) => {
   console.error("Error inicial de MongoDB:", err.message);
   // No bloqueamos el servidor, las rutas manejarán el error
 });
@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // Configurar Swagger UI
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 /**
  * @swagger
@@ -198,7 +198,7 @@ app.post("/api/v1/login", (req, res) => {
   // Validar que se enviaron las credenciales
   if (!username || !password) {
     return res.status(400).json({
-      error: "Username y password son requeridos"
+      error: "Username y password son requeridos",
     });
   }
 
@@ -206,7 +206,7 @@ app.post("/api/v1/login", (req, res) => {
 
   if (!resultado.success) {
     return res.status(401).json({
-      error: resultado.error
+      error: resultado.error,
     });
   }
 
@@ -291,19 +291,19 @@ app.post("/api/v1/login", (req, res) => {
 app.get("/api/v1/usuarios", verificarToken, async (req, res) => {
   try {
     const resultado = await obtenerUsuarios();
-    
+
     if (!resultado.success) {
       return res.status(500).json({
         error: "Error al obtener usuarios",
-        detalle: resultado.error
+        detalle: resultado.error,
       });
     }
-    
+
     res.json(resultado);
   } catch (error) {
     res.status(500).json({
       error: "Error en el servidor",
-      detalle: error.message
+      detalle: error.message,
     });
   }
 });
@@ -311,8 +311,9 @@ app.get("/api/v1/usuarios", verificarToken, async (req, res) => {
 // Exportar la app para Vercel
 export default app;
 
-// Iniciar el servidor solo en desarrollo local (no en Vercel)
-if (process.env.NODE_ENV !== 'production') {
+// Iniciar el servidor (Heroku y desarrollo local)
+// Vercel NO ejecuta esto porque usa el export default
+if (!process.env.VERCEL) {
   app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
   });
