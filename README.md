@@ -320,8 +320,6 @@ Este proyecto implementa autenticación JWT en 3 pasos:
 - Usuario: `admin` / Password: `admin123`
 - Usuario: `usuario` / Password: `user123`
 
-Para más detalles, consulta [AUTH_GUIDE.md](AUTH_GUIDE.md)
-
 ## Documentación Adicional
 
 - **[APUNTES.md](APUNTES.md)**: Notas de aprendizaje sobre Mongoose, MongoDB y arquitectura del proyecto.
