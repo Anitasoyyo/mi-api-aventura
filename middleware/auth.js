@@ -1,5 +1,4 @@
-// Middleware para verificar JWT
-// Este archivo lo que hace es revisar si traes un TOKEN válido antes de dejarte pasar
+// Middleware para verificar token JWT
 import jwt from "jsonwebtoken";
 
 export default function verificarToken(req, res, next) {

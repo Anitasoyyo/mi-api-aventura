@@ -1,4 +1,4 @@
-// Configuración de la conexión a MongoDB
+// Configuración de conexión a MongoDB
 import mongoose from "mongoose";
 
 const connectDB = async () => {

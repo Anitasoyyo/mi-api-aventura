@@ -1,4 +1,4 @@
-// Este archivo es para generar el token JWT si usuario y password son correctos
+// Generar token JWT
 import jwt from "jsonwebtoken";
 
 // Usuarios de prueba
