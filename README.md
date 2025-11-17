@@ -1,6 +1,6 @@
 # Mi API Aventura
 
-Este es un proyecto de práctica para aprender sobre:
+Proyecto de práctica para aprender sobre:
 
 - **Despliegue en Vercel**: Configuración y deploy de una API en Vercel
 - **Servidor con Express**: Creación de un servidor backend utilizando Express.js
@@ -30,8 +30,6 @@ API RESTful desarrollada con Node.js y Express que implementa:
 **API en Vercel:** https://mi-api-aventura-sigma.vercel.app
 
 **Documentación Swagger:** http://localhost:3000/api-docs (en desarrollo local)
-
-**API en Heroku:** https://mi-api-aventura-93c83ba760d7.herokuapp.com/
 
 ## Estructura del Proyecto
 
@@ -214,14 +212,6 @@ cp .env.example .env
 # - MONGODB_URI: Tu URL de conexión a MongoDB Atlas
 # - JWT_SECRET: Clave secreta para firmar los tokens JWT
 ```
-
-**Variables requeridas:**
-
-| Variable             | Descripción                                              | Ejemplo                            |
-| -------------------- | -------------------------------------------------------- | ---------------------------------- |
-| `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                   |
-| `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | Ver documentación de MongoDB Atlas |
-| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | Genera con: `openssl rand -hex 32` |
 
 ## Configuración de MongoDB Atlas
 
