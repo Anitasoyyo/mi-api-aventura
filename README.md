@@ -23,11 +23,13 @@ API RESTful desarrollada con Node.js y Express que implementa:
 - Autenticación con JWT (JSON Web Tokens)
 - Rutas protegidas con middleware
 - Documentación interactiva con Swagger UI
-- Desplegada en Vercel
+- Desplegada en Vercel y Netlify
 
 ## URLs de Producción
 
 **API en Vercel:** https://mi-api-aventura-sigma.vercel.app
+
+**API en Netlify:** https://glittering-bavarois-f04d99.netlify.app
 
 **Documentación Swagger:** http://localhost:3000/api-docs (en desarrollo local)
 
@@ -308,3 +310,4 @@ Este proyecto implementa autenticación JWT en 3 pasos:
 
 - **[APUNTES.md](APUNTES.md)**: Notas de aprendizaje sobre Mongoose, MongoDB y arquitectura del proyecto.
   También incluyo imágenes que explican de manera intuitiva la estructura que he seguido para crear diferentes partes del proyecto.
+https://www.netlify.com/support/
