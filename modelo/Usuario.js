@@ -1,4 +1,4 @@
-// Modelo de Usuario para MongoDB
+// Schema de Usuario
 import mongoose from 'mongoose';
 
 const usuarioSchema = new mongoose.Schema({
