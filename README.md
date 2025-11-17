@@ -158,8 +158,8 @@ Genera un token JWT para autenticación
 
 ```json
 {
-  "usuario": "admin",
-  "password": "admin123"
+  "usuario": "nombre_usuario",
+  "password": "contraseña_usuario"
 }
 ```
 
@@ -181,10 +181,7 @@ Genera un token JWT para autenticación
 }
 ```
 
-**Usuarios de prueba:**
-
-- Usuario: `admin` / Password: `admin123`
-- Usuario: `usuario` / Password: `user123`
+**Nota:** Los usuarios de prueba están definidos en `api/v1/login.js`
 
 ## Instalación
 
@@ -224,7 +221,7 @@ cp .env.example .env
 | -------------------- | -------------------------------------------------------- | ---------------------------------- |
 | `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola                 | `"¡Bienvenido!"`                   |
 | `MONGODB_URI`        | URL de conexión a MongoDB Atlas                          | Ver documentación de MongoDB Atlas |
-| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | `mi-super-secreto-2024`            |
+| `JWT_SECRET`         | Clave secreta para JWT (usa una cadena aleatoria segura) | Genera con: `openssl rand -hex 32` |
 
 ## Configuración de MongoDB Atlas
 
@@ -266,7 +263,7 @@ Este proyecto utiliza las siguientes variables de entorno:
 | -------------------- | ---------------------------------------- | ------------------------------------- |
 | `MENSAJE_BIENVENIDA` | Mensaje personalizado del endpoint /hola | `"¡Bienvenido!"`                      |
 | `MONGODB_URI`        | URL de conexión a MongoDB Atlas          | Obtener desde MongoDB Atlas Dashboard |
-| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | `mi-super-secreto-2024`               |
+| `JWT_SECRET`         | Clave secreta para firmar tokens JWT     | Genera con: `openssl rand -hex 32`    |
 | `PORT`               | Puerto del servidor (opcional)           | `3000`                                |
 
 ## Despliegue en Vercel
@@ -299,7 +296,7 @@ Este proyecto incluye **documentación interactiva** generada con Swagger UI.
 
 1. Haz clic en **POST /api/v1/login**
 2. Haz clic en "Try it out"
-3. Ingresa credenciales (ej: `admin` / `admin123`)
+3. Ingresa credenciales de prueba (ver archivo `api/v1/login.js`)
 4. Copia el token de la respuesta
 5. Haz clic en el botón **"Authorize"** (🔒) en la parte superior
 6. Pega el token y haz clic en "Authorize"
@@ -315,10 +312,7 @@ Este proyecto implementa autenticación JWT en 3 pasos:
    - `POST /api/v1/login` → Crea el token
    - `GET /api/v1/usuarios` → Ruta protegida que usa `verificarToken` como middleware
 
-**Usuarios de prueba:**
-
-- Usuario: `admin` / Password: `admin123`
-- Usuario: `usuario` / Password: `user123`
+**Nota:** Consulta el archivo `api/v1/login.js` para ver los usuarios de prueba disponibles.
 
 ## Documentación Adicional
 
