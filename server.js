@@ -308,12 +308,12 @@ app.get("/api/v1/usuarios", verificarToken, async (req, res) => {
   }
 });
 
-// Exportar la app para Vercel
+// Exportar la app para Vercel y Netlify (ES Modules)
 export default app;
 
 // Iniciar el servidor (Heroku y desarrollo local)
-// Vercel NO ejecuta esto porque usa el export default
-if (!process.env.VERCEL) {
+// Vercel y Netlify NO ejecutan esto porque usan el export default
+if (!process.env.VERCEL && !process.env.NETLIFY) {
   app.listen(PORT, () => {
     console.log(`Servidor escuchando en http://localhost:${PORT}`);
   });
