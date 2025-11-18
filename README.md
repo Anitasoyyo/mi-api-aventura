@@ -2,7 +2,7 @@
 
 Proyecto de práctica para aprender sobre:
 
-- **Despliegue en Vercel**: Configuración y deploy de una API en Vercel
+- **Despliegue en Vercel y en Netflify**:
 - **Servidor con Express**: Creación de un servidor backend utilizando Express.js
 - **Personalización de package.json**: Configuración manual del archivo package.json con campos personalizados
 - **Control de versiones con GitHub**: Gestión del código fuente en GitHub
@@ -25,13 +25,13 @@ API RESTful desarrollada con Node.js y Express que implementa:
 - Documentación interactiva con Swagger UI
 - Desplegada en Vercel y Netlify
 
-## URLs de Producción
+## URLs
 
 **API en Vercel:** https://mi-api-aventura-sigma.vercel.app
 
 **API en Netlify:** https://glittering-bavarois-f04d99.netlify.app
 
-**Documentación Swagger:** http://localhost:3000/api-docs (en desarrollo local)
+**Documentación Swagger:** http://localhost:3000/api-docs
 
 ## Estructura del Proyecto
 
@@ -310,4 +310,4 @@ Este proyecto implementa autenticación JWT en 3 pasos:
 
 - **[APUNTES.md](APUNTES.md)**: Notas de aprendizaje sobre Mongoose, MongoDB y arquitectura del proyecto.
   También incluyo imágenes que explican de manera intuitiva la estructura que he seguido para crear diferentes partes del proyecto.
-https://www.netlify.com/support/
+  https://www.netlify.com/support/
